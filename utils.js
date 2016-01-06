@@ -17,5 +17,19 @@ function randomArr(min, max, len){
 	return arr;
 }
 
+function array_foreach(arr, proc){
+	for (var i = 0, len = arr.length; i < len; i++){
+		proc(arr[i]);
+	}
+}
+
+function array_map(arr, proc){
+	for (var i = 0, len = arr.length; i < len; i++){
+		arr[i] = proc(arr[i]);
+	}
+}
+
 exports.print = print;
 exports.randomArr = randomArr;
+exports.array_foreach = array_foreach;
+exports.array_map = array_map;
